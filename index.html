@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fest Anmälan</title>
+    <style>
+        /* Grundläggande styling för hela sidan */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #90ee90; /* Ljusgrön bakgrund */
+            font-family: Arial, sans-serif;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Bilden som bakgrund högst upp på sidan */
+        .header-img {
+            width: 100%;
+            height: auto;
+            max-height: 1000px; /* Begränsar bildens höjd */
+            object-fit: cover; /* Gör så att bilden täcker hela området utan att bli förvrängd */
+            display: block; /* Ser till att bilden inte visas bredvid något annat */
+            margin: 0 auto; /* Centrerar bilden horisontellt */
+        }
+
+        /* Formuläret med enkel styling */
+        form {
+            margin-top: 20px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            text-align: left;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        /* Stil för formulärfält */
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Stil för knappen */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Hover-effekt på knappen */
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Döljer annan text på sidan */
+        h1, p {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Bild högst upp på sidan -->
+    <img src=inbjudan.png alt="Festbild" class="header-img">
+
+    <!-- Formuläret för anmälan -->
+    <form action="DIN_SERVER_URL" method="POST">
+        <label for="namn">Ditt namn:</label>
+        <input type="text" id="namn" name="namn" required>
+
+        <label for="epost">Din e-post:</label>
+        <input type="email" id="epost" name="epost" required>
+
+        <label for="antal">Antal gäster:</label>
+        <input type="number" id="antal" name="antal" required min="1">
+
+        <label for="meddelande">Eventuella allergier eller frågor:</label>
+        <textarea id="meddelande" name="meddelande" rows="4"></textarea>
+
+        <button type="submit">Anmäl dig!</button>
+    </form>
+</body>
+</html>
+
