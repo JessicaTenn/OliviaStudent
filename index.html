@@ -4,84 +4,145 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fest Anmälan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         /* Grundläggande styling för hela sidan */
         body {
-            margin: 0;
-            padding: 0;
-            background-color: #90ee90; /* Ljusgrön bakgrund */
-            font-family: Arial, sans-serif;
-            color: #333;
-            text-align: center;
-        }
-
-        /* Bilden som bakgrund högst upp på sidan */
-        .header-img {
-            width: 100%;
-            height: auto;
-            max-height: 1000px; /* Begränsar bildens höjd */
-            object-fit: cover; /* Gör så att bilden täcker hela området utan att bli förvrängd */
-            display: block; /* Ser till att bilden inte visas bredvid något annat */
-            margin: 0 auto; /* Centrerar bilden horisontellt */
-        }
-
-        /* Formuläret med enkel styling */
-        form {
-            margin-top: 20px;
-            background-color: #ffffff;
+            font-family: Georgia, serif;
+            background-color: white;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            display: inline-block;
-            text-align: left;
-            width: 100%;
-            max-width: 600px;
+            margin: 0;
         }
 
-        /* Stil för formulärfält */
-        input, textarea {
+        h1 {
+            
+            text-align: center; /* Centrerar rubriken */
+            margin-top: 20px;
+            font-weight: normal;
+            line-height: 1.5;
+        }
+
+        p {
+            text-align: center; /* Centrerar texten */
+            text-align: center; /* Centrerar texten */
+            font-size: 1.2em;
+        }
+
+        /* Styling för texten med utspring och mottagning */
+        .event-times {
+            text-align: center; /* Centrerar texten i div */
+            font-size: 1.3em; /* Justerar storlek på texten */
+             margin-top: 30px; /* Lägger till avstånd från innehållet ovanför */
+        }
+
+     .event-times p {
+        margin: 10px 0; /* Lägg till mellanrum mellan p-taggarna */
+        }
+
+        .header-img {
+            width: 700px; /* Gör bilden responsiv */
+            height: auto;
+            max-height: 500px; /* Justera maxhöjd */
+            object-fit: cover; /* Håller bilden proportionerlig */
+            display: block; /* Gör bilden till ett block-element */
+            margin-left: auto; /* Centrera bilden till vänster */
+             margin-right: auto; /* Centrera bilden till höger */
+        }
+
+        .footer-img {
+            width: auto; /* Gör bilden responsiv */
+            height: auto;
+            max-height: 200%; /* Justera maxhöjd */
+            object-fit: cover; /* Håller bilden proportionerlig */
+            display: block; /* Gör bilden till ett block-element */
+            margin-left: auto; /* Centrera bilden till vänster */
+             margin-right: auto; /* Centrera bilden till höger */
+        }
+
+        form {
+            font-family: Georgia, serif;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 500px;
+            margin: 20px auto;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"], input[type="email"], input[type="number"], textarea {
             width: 100%;
             padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            margin-bottom: 15px;
+            border: 2px solid #00796b;
+            border-radius: 4px;
         }
 
-        /* Stil för knappen */
         button {
-            background-color: #4CAF50;
+            background-color: #00796b;
             color: white;
-            padding: 10px 20px;
+            padding: 10px 15px;
             border: none;
-            border-radius: 5px;
             cursor: pointer;
+            border-radius: 4px;
+            font-size: 1.1em;
         }
 
-        /* Hover-effekt på knappen */
         button:hover {
-            background-color: #45a049;
-        }
-
-        /* Döljer annan text på sidan */
-        h1, p {
-            display: none;
+            background-color: #004d40;
         }
     </style>
 </head>
 <body>
     <!-- Bild högst upp på sidan -->
-    <img src="https://github.com/JessicaTenn/OliviaStudent/raw/main/inbjudan.png" alt="Festbild" class="header-img" />
+    <img src=inbjudan_5.png alt="Festbild" class="header-img">
+
+    <h1>Välkommen att fira studenten<br>Torsdag 5 juni</h1>
+    
+
+    <div class="event-times">
+        <p>Utspring<br>kl 16.00 Lars Erik Larsson gymnasiet</p>
+        <br>
+        <p>Mottagning<br>Från ca kl 17.30, Resedavägen 55A</p>
+        <br>
+        <p>O.S.A.<br>Senast 15 maj</p>
+        <br>
+        <p>Anmäl dig här!</p>
+    </div>
+    <img src=sunflower.png alt="Festbild" class="footer-img">
 
     <!-- Formuläret för anmälan -->
-    <form action="DIN_SERVER_URL" method="POST">
+    <form action="mailto:jessica@westgards.com" method="POST" enctype="text/plain">
         <label for="namn">Ditt namn:</label>
         <input type="text" id="namn" name="namn" required>
 
         <label for="epost">Din e-post:</label>
         <input type="email" id="epost" name="epost" required>
 
+         <!-- Kommer/Kommer inte alternativen -->
+         <p>Kan du/ni komma?</p>
+
+         <input type="checkbox" id="Ja" name="kommer" value="Ja">
+        <label for="mat">Ja/vi kommer gärna!</label><br>
+        <br>
+
+        <input type="checkbox" id="Nope" name="kommer" value="Nope">
+        <label for="mat">Tyvärr kan jag/vi inte komma!</label><br>
+        <br>
+
         <label for="antal">Antal gäster:</label>
         <input type="number" id="antal" name="antal" required min="1">
+
+         <!-- Anmälnings alternativen -->
+        <p>Detta ser jag fram emot!</p>
+
+         <input type="checkbox" id="mat" name="intresse" value="mat">
+        <label for="mat">Gärna god mat och dryck! <i class="fas fa-utensils"></i></label><br>
+        <br>
+
+        <input type="checkbox" id="dryck" name="intresse" value="dryck">
+        <label for="dryck">Ett glas bubbel och kanske en dans eftersom jag inte kommer på middagen 🍸💃</label><br><br>
+
+        <br>
 
         <label for="meddelande">Eventuella allergier eller frågor:</label>
         <textarea id="meddelande" name="meddelande" rows="4"></textarea>
