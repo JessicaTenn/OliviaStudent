@@ -40,9 +40,9 @@
         }
 
         .header-img {
-            width: 80%; /* Gör bilden responsiv */
+            width: %; /* Gör bilden responsiv */
             height: auto;
-            max-height: 200%; /* Justera maxhöjd */
+            max-height: 500px; /* Justera maxhöjd */
             object-fit: cover; /* Håller bilden proportionerlig */
             display: block; /* Gör bilden till ett block-element */
             margin-left: auto; /* Centrera bilden till vänster */
@@ -94,7 +94,7 @@
 </head>
 <body>
     <!-- Bild högst upp på sidan -->
-    <img src=inbjudan_8.png alt="Festbild" class="header-img">
+    <img src=inbjudan_7.png alt="Festbild" class="header-img">
 
     <h1>Välkommen att fira studenten<br>Torsdag 5 juni</h1>
     
@@ -110,46 +110,11 @@
     </div>
     <img src=sunflower.png alt="Festbild" class="footer-img">
 
-    <!-- Formuläret för anmälan -->
-    <form action="mailto:jessica@westgards.com?subject=Anmälan%20Olivias%20Student" method="POST" enctype="text/plain">
-        <label for="namn">Ditt namn:</label>
-        <input type="text" id="namn" name="namn" required>
 
-        <label for="epost">Din e-post:</label>
-        <input type="email" id="epost" name="epost" required>
-
-         <!-- Kommer/Kommer inte alternativen -->
-         <p>Kan du/ni komma?</p>
-
-         <input type="checkbox" id="Ja" name="kommer" value="Ja">
-        <label for="mat">Jag/vi kommer gärna!</label><br>
-        <br>
-
-        <input type="checkbox" id="Nope" name="kommer" value="Nope">
-        <label for="mat">Tyvärr kan jag/vi inte komma!</label><br>
-        <br>
-
-        <label for="antal">Antal gäster:</label>
-        <input type="number" id="antal" name="antal" required min="1">
-
-         <!-- Anmälnings alternativen -->
-        <p>Detta ser jag fram emot!</p>
-
-         <input type="checkbox" id="mat" name="intresse" value="mat">
-        <label for="mat">Gärna god mat och dryck! <i class="fas fa-utensils"></i></label><br>
-        <br>
-
-        <input type="checkbox" id="dryck" name="intresse" value="dryck">
-        <label for="dryck">Ett glas bubbel och kanske en dans eftersom jag inte kommer på middagen 🍸💃</label><br><br>
-
-        <br>
-
-        <label for="meddelande">Eventuella allergier eller frågor:</label>
-        <textarea id="meddelande" name="meddelande" rows="4"></textarea>
-
-        <button type="submit">Anmäl dig!</button>
-    </form>
     
+    <div style="display: flex; justify-content: center; padding: 20px;">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdxyNBMQMX-tLGLb3JYtonlQsPEmHYPNhmw9gI9Hf8Ggz6cjQ/viewform?embedded=true" width="640" height="1223" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+    </div>
 </body>
 </html>
 
